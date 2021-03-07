@@ -1,151 +1,182 @@
 # -personal-website
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>Page Title</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
-
-/* Style the header */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: grey;
-  color: white;
-font-family: Arial, Helvetica, sans-serif;
+h2 { 
+font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+text-align:center;
+font-weight: bold;
+color: grey;
+} p{
+color:#A9A9A9;
+font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
-/* Increase the font size of the h1 element */
-.header h1 {
-  font-size: 40px;
+html {
+  box-sizing: border-box;
 }
 
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-/* Style the navigation bar links */
-.navbar a {
+.column {
   float: left;
-  display: block;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+
+.container {
+  padding: 0 20px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
   color: white;
+  background-color:#E6E6FA;
   text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Column container */
-.row {  
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
+  cursor: pointer;
   width: 100%;
-  padding: 20px;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
+.button:hover {
+  background-color: #555;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
   }
+}html {
+  height:100%;
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width:100%;
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #E6E6FA 50%, #FFF0F5 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+} 
+ul.a{
+  list-style-type: circle;
+font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+text-align:left;
+font-weight: bold;
+color:#D3D3D3;
+
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
   }
 }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>Welcome to my Perosnal Website</h1>
 
-</div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content"> <h1></h1>
+<h2 style="text-align:center">
+MY PERSONAL WEBSITE</h2>
+
+
+
+<div class="about-section">
+
+</div> 
 
 
 <div class="row">
-  <div class="side">
-    <h2>About Me</h2>
+  <div class="column">
+    <div class="card">
+   
+      <div class="container">
+        <h2>Nawal Almuajel</h2>
+        <p class="title">Co-Founder of Booklee</p>
+               <p> My Interests:</p>
+        <ul class="a">
+ 
+        <li>AI</li>
+        <li>Digital Marketing</li>
+        <li> Web Development</li>
+        <li>Voulnteering</li>
+        <li>Data Analaysis</li>
+        
+        
+        </ul>
+        <p>Projects I worked on </p>
+       
     
-    <p>An information Systems student desirous of an internship role in a challenging workplace that welcomes innovative ideas and offers growth opportunities and positive environment for accomplishing projects.
-
-
-Passionate about AI, Data Analysis, Front-end development, Digital Marketing and Woman empowerment. </p>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
-  </div>
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
+  <a href="https://drive.google.com/file/d/1z1teHrhDYLMaNeBh-SWWfvuDEf0zrXrZ/view?usp=sharing" class="button">Car2Share</a>
 </div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+<p>contact me at:</p>
+<li>nalmujel@gmail.com</li>
+<li>a</li>
+      </div>
+    </div>
+  </div>
+ 
+
 
 </body>
 </html>
